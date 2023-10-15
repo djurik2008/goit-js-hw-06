@@ -7,16 +7,20 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientsList = ingredients.map(ingredient => {
+
+const makeIngredientsList = (ingredients) => {
+  return ingredients.map(ingredient => {
   const bodyUlEl = document.createElement('li')
   bodyUlEl.textContent = ingredient
   bodyUlEl.classList.add('item')
   return bodyUlEl
-})
+  })
+}
 
 const ingredientsListContainer = document.querySelector('#ingredients')
-ingredientsListContainer.append(...ingredientsList)
 
+const ingredientsList = makeIngredientsList(ingredients)
+ingredientsListContainer.append(...ingredientsList)
 
 
 
