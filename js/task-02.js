@@ -17,10 +17,10 @@ const makeIngredientsList = (ingredients) => {
   })
 }
 
-const ingredientsListContainer = document.querySelector('#ingredients')
+const ingredientsListContainerEl = document.querySelector('#ingredients')
 
 const ingredientsList = makeIngredientsList(ingredients)
-ingredientsListContainer.append(...ingredientsList)
+ingredientsListContainerEl.append(...ingredientsList)
 
 
 
