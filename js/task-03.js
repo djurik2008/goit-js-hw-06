@@ -17,5 +17,5 @@ const imgContainerEl = document.querySelector(".gallery")
 
 for (const img of images) {
   const {url, alt} = img
-  imgContainerEl.insertAdjacentHTML("beforeend", `<img src=${url} alt=${alt} clas="gallery-item"></img>`)
+  imgContainerEl.insertAdjacentHTML("beforeend", `<li><img src=${url} alt=${alt} width="1260" clas="gallery-item"></img></li>`)
 }
