@@ -9,5 +9,6 @@
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",
   "proseWrap": "always",
-  "htmlWhitespaceSensitivity": "css"
+  "htmlWhitespaceSensitivity": "css",
+  "editor.formatOnSave": true
 }
