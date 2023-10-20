@@ -1,8 +1,8 @@
 const formEl = document.querySelector('.login-form');
 
-formEl.addEventListener('submit', onSubmitCheck);
+formEl.addEventListener('submit', onFormSubCheck);
 
-function onSubmitCheck(event) {
+function onFormSubCheck(event) {
   event.preventDefault();
 
   const formEmailEl = event.currentTarget.elements.email;
@@ -12,6 +12,13 @@ function onSubmitCheck(event) {
     alert('Потрібно заповнити всі поля');
   } else {
     const formData = new FormData(event.currentTarget);
-    console.log(formData);
+
+    const formDataObj = {};
+
+    formData.forEach((value, name) => {
+      formDataObj[name] = value;
+    });
+    console.log(formDataObj);
   }
+  event.currentTarget.reset();
 }
