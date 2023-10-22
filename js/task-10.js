@@ -21,15 +21,19 @@ function handlerCreateBoxes() {
     height: 20,
   };
 
+  const boxElArr = [];
+
   for (let i = 1; i <= amount; i += 1) {
     const randomColor = getRandomHexColor();
     let boxSizeWidth = (boxSize.width += 10);
     let boxSizeHeight = (boxSize.height += 10);
-    const boxEl = `<div style="width: ${boxSizeWidth + 'px'}; height: ${
-      boxSizeHeight + 'px'
-    }; background-color: ${randomColor}"></div>`;
-    boxElContainer.insertAdjacentHTML('beforeend', boxEl);
+    const boxEl = document.createElement('div');
+    boxEl.style.width = boxSizeWidth + 'px';
+    boxEl.style.height = boxSizeHeight + 'px';
+    boxEl.style.backgroundColor = randomColor;
+    boxElArr.push(boxEl);
   }
+  boxElContainer.append(...boxElArr);
 }
 
 function handlerCleareBoxes() {
