@@ -1,16 +1,7 @@
-const listWithClass = document.querySelectorAll(".item")
-console.log(`Number of categories: ${listWithClass.length}`)
-const listOfCategories = []
+const listWithClass = document.querySelectorAll('.item');
+console.log(`Number of categories: ${listWithClass.length}`);
 
 listWithClass.forEach(item => {
-    console.log(`Category: ${item.firstElementChild.textContent}
-    Elements: ${item.lastElementChild.childElementCount}`)
+  console.log(`Category: ${item.firstElementChild.textContent}
+    Elements: ${item.lastElementChild.childElementCount}`);
 });
-
-
-
-
-
-
-
-
