@@ -6,9 +6,8 @@ inputValidation.addEventListener('blur', onInputValidationLength);
 
 function onInputValidationLength(event) {
   if (event.currentTarget.value.length === verificationCondition) {
-    inputValidation.classList.add('valid');
-    console.log(event.currentTarget.value.length);
+    inputValidation.classList = 'valid';
   } else {
-    inputValidation.classList.add('invalid');
+    inputValidation.classList = 'invalid';
   }
 }
